@@ -11,7 +11,10 @@
 	$('.cart-dropdown').on('click', function (e) {
 		e.stopPropagation();
 	});
-
+	$('.add-to-cart-btn').click(function (e){
+		e.preventDefault();
+		var item_id = $('.item_id').val();
+	});
 	/////////////////////////////////////////
 
 	// Products Slick

@@ -124,7 +124,7 @@
 										</div>
 										<div class="cart-btns">
 											<a href="#">View Cart</a>
-											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+											<a href="{% url 'checkout' %}">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -223,10 +223,11 @@
 							<p>{{item.manufacture}}</p>
 
 							<div class="add-to-cart">
+								<input type="hidden" value ="{{item.id}}" class="item_id">
 								<div class="qty-label">
 									Quantity: {{item.quantity}}
 								</div>
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+								<button class="add-to-cart-btn "><i class="fa fa-shopping-cart"></i> add to cart</button>
 							</div>
 
 
